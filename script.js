@@ -22,7 +22,16 @@ li.on("dblclick" , function crossOut(){
     li.toggleClass("strike");
 });
 
+//3 Adding a delete button
+let crossOutButton = $('<crossOutButton></corssOutButton>');
+crossOutButton.append(document.createTextNode('X'));
+li.append(crossOutButton);
 
+crossOutButton.on("click", deleteListenItem);
+function deleteListenItem(){
+    li.addClass ("delete")
+}
+$ ('#list').sortable ();
 
 }
 
